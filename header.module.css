@@ -1,0 +1,43 @@
+/* Header.module.css */
+.header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.link-green {
+  color: green;
+}
+.icon-container {
+  display: flex;
+  margin-left:500px;
+  top:0;
+  align-items: right;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Display list items horizontally */
+}
+.ul li {
+  font-size: 30px;
+}
+.nav li {
+  margin-right: 70px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav li:hover a {
+  color: #00cc00; /* Change text color to green on hover */
+}

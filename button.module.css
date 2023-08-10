@@ -1,0 +1,118 @@
+/* button.module.css */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to center the content horizontally */
+  position: relative;
+  padding: 0.2em 0.5em;
+  border: #4CAF50 solid 0.10em;
+  border-radius: 0.25em;
+  color: #4CAF50;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family:cursive;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 200ms, color 600ms;
+  user-select: none;
+  width: 220px;
+}
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #4CAF50;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 6.25em;
+  aspect-ratio: 1;
+  background:black;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+/* Define CSS variables for colors using class names instead of :root */
+/*.button {
+  --glow-color: #4CAF50;
+  --glow-spread-color: rgba(198, 255, 0, 0.781);
+  --enhanced-glow-color: #C6FF00;
+  --btn-color: #EEFF41;
+
+
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  text-align: center;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: center;
+  transition: all 0.3s;
+}
+
+.button::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.button:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+*/

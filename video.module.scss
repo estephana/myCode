@@ -1,0 +1,73 @@
+.video-body {
+	body {
+	  background-image: /*url('http://wallpaper-gallery.net/images/michael-jackson-wallpaper-high-resolution/michael-jackson-wallpaper-high-resolution-10.jpg');*/ url('http://wallpaper-gallery.net/images/michael-jackson-wallpaper-high-resolution/michael-jackson-wallpaper-high-resolution-25.jpg');
+	  background-size: cover;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	}
+
+	ul {
+	    position: fixed;
+	    list-style-type: none;
+	    margin: 50;
+	    padding: 0;
+	    /*padding-right: 959px;*/
+	    overflow: hidden;
+	    background-color: #333;
+	}
+
+	li {
+	    float: left;
+	}
+
+	li a {
+	    display: block;
+	    color: white;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+
+	li a:hover:not(.active) {
+	    background-color: #505;
+	    text-decoration: none;
+	    color: black;
+	}
+
+	.active {
+	    background-color: #505;
+	    text-decoration: none;
+	    color: black;
+	}
+
+	h1{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 5vw;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.5rem;
+  color: #4CAF50;
+  transition: all 0.3s ease;
+  z-index: 3;
+  background: white;
+}
+h1:hover {
+  transform: translate3d(0, -10px, 22px);
+  color: #03dac6;
+}
+
+	iframe {
+	  margin:0px;
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  border: none silver 2px;
+	}
+
+	table {
+	  margin-left: 125px;
+	  margin-bottom: 30px;
+	  opacity: 0.8;
+	}
+
+
+}

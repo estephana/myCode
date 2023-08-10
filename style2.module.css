@@ -1,0 +1,46 @@
+.container{
+  display: flex;
+  top:0px;
+  margin-left: 400px;
+}
+.circle{
+border-radius: 50%;
+margin: 0.15em;
+font-size: 3em;
+}
+.circle:hover {
+  background-color: green; /* Change background color on hover */
+}
+
+.fa-twitter{
+background: #4099FF;
+color: #FFFFFF;
+padding: 0.05em 0.07em;
+}
+
+.fa-google-plus{
+color: #FFFFFF;
+background: #dd4b39;
+padding: 0.1em 0.1em;
+}
+
+.fa-dribbble{
+color: #ea4c89;
+}
+
+.fa-pinterest{
+color: #cb2027;
+}
+
+.fa-facebook{
+background: #3B5998;
+color: #FFFFFF;
+padding: 0.05em 0.3em;
+}
+
+.fa-youtube{
+background: #bb0000;
+color: #FFFFFF;
+padding: 0.25em 0.25em;
+
+}
