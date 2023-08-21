@@ -1,0 +1,496 @@
+/* styles.css */
+
+/* Hide the default checkbox */
+.containerr input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+h1{
+ font-family: "Josefin Sans", sans-serif;
+ font-size: 5vw;
+ margin: 0;
+ padding-bottom: 0.5rem;
+ letter-spacing: 0.5rem;
+ color: blue;
+ transition: all 0.3s ease;
+ z-index: 3;
+ background: white;
+}
+h1:hover {
+ transform: translate3d(0, -10px, 22px);
+ color: #bdbdbd;
+}
+
+.containerr {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background: blue;
+  border-radius: 50px;
+  transition: all 0.7s;
+  --spread: 20px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerr input:checked ~ .checkmark {
+  background: white;
+  box-shadow: -10px -10px var(--spread) 0px #0000FF, 0 -10px var(--spread) 0px #0000FF, 10px -10px var(--spread) 0px #0000FF, 10px 0 var(--spread) 0px #0000FF, 10px 10px var(--spread) 0px #0000FF, 0 10px var(--spread) 0px #0000FF, -10px 10px var(--spread) 0px #0000FF;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerr input:checked ~ .checkmark:after {
+  display: block;
+  animation: checkmark 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* Style the checkmark/indicator */
+.containerr .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid blue;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+/* Add animation for checkmark */
+@keyframes checkmark {
+  from {
+    transform: rotate(-45deg) scale(0);
+  }
+
+  to {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+/* Style the label text */
+.containerr span {
+  margin-left: 2em;
+  color: black;
+  font-weight: bold;
+}
+
+table {
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: 10px;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+th {
+  background-color: #bdbdbd;
+  color: blue;
+  padding: 12px;
+  font-size: 18px;
+  text-align: left;
+}
+
+
+td {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid blue;
+}
+
+.blue-bg {
+  background-color: #bdbdbd; /* Set the desired background color */
+  color: blue; /* Set a contrasting text color for better visibility */
+}
+tr:hover {
+  background-color: #f2f2f2;
+}
+header {
+  background-color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 26px;
+  color: blue;
+  cursor: pointer;
+  font-weight: bold;
+}
+nav ul li:hover {
+  background-color: blue;
+  color: white;
+  padding: 8px 12px; /* Optional: Adjust padding on hover for a visual effect */
+}
+
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  color: blue;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.shadow__btn {
+  background: #bdbdbd;
+  box-shadow: 0 0 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+  box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, button{
+  font-family: 'Helvetica Neue', arial, sans-serif;
+}
+
+.controls{
+  padding: 2%;
+  background: #bdbdbd;
+  color: blue;
+  display: flex;
+ align-items: center;
+}
+
+label{
+  font-weight: 300;
+  margin: 0 0 0 0;
+}
+
+button{
+  display: inline-block;
+  padding: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active{
+  background: #68b8c4;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+button + label{
+  margin-left: 1em;
+}
+
+.container{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  background: #68b8c4;
+
+  -webkit-backface-visibility: hidden;
+}
+
+.container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container .mix,
+.container .gap{
+  display: inline-block;
+  width: 49%;
+}
+
+.container .mix{
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+}
+
+.container .mix.category-1{
+  border-top: 2px solid limegreen;
+}
+
+.container .mix.category-2{
+  border-top: 2px solid yellow;
+}
+
+.container .mix:after{
+  content: attr(data-myorder);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.container .mix:before{
+  content: '';
+  display: inline-block;
+  padding-top: 60%;
+}
+
+@media all and (min-width: 420px){
+  .container .mix,
+  .container .gap{
+    width: 32%;
+  }
+}
+
+@media all and (min-width: 640px){
+  .container .mix,
+  .container .gap{
+    width: 23.5%;
+  }
+}
+nav {margin-top: 0px; margin-left: 0px;}
+.drop-down li {
+  display: block;
+}
+.drop-down {
+  max-height: 200px; /* Set a maximum height for the dropdown */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+
+/* Drop Down Styles
+================================ */
+nav .drop-down {
+  list-style: none;
+  overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+  height: 172px; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
+
+  font-family: Arial;
+  width: 120px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: height 0.1s ease;
+          transition: height 0.1s ease;
+}
+
+nav .drop-down.closed {
+
+  height: 43px;
+}
+
+nav .drop-down li {
+  border-bottom: 0px  ;
+}
+
+nav .drop-down li button {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px; /* Larger touch target area */
+}
+
+nav .drop-down li:first-child button:after {
+  content: "\25BC";
+  float: right;
+
+  margin-right: 15px;
+}
+.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  color: blue;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+/* Multiple Checkboxes can be chained together for a radio input */
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #2d6737;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #34723f;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+
+
+.card {
+  width: 190px;
+  height: 254px;
+  background: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px 1px #00000088;
+  cursor: pointer;
+}
+
+.card .content {
+  border-radius: 5px;
+  background: #171717;
+  width: 186px;
+  height: 250px;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content::before {
+  opacity: 0;
+  transition: opacity 300ms;
+  content: ' ';
+  display: block;
+  background: white;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  filter: blur(50px);
+}
+
+.card:hover .content::before {
+  opacity: 1;
+}
+
+.card::before {
+  opacity: 0;
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 360px;
+  background: linear-gradient(90deg, transparent, #ff2288, #387EF0, transparent);
+  transition: opacity 300ms;
+  animation: rotation_9018 3000ms infinite linear;
+  animation-play-state: paused;
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+}
+
+.card::after {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 190px;
+  height: 254px;
+  background: #17171733;
+  backdrop-filter: blur(50px);
+}
+
+@keyframes rotation_9018 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
